@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objects</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+        /*
+    OBJECTS 
+    - Collection of elements, 'NAMED' indices
+    - key and value pair
+  */
+
+
+        /* 1.objects are more structures way to store data 
+       2.bcos there are keys to store data
+       3.not array to store data
+       4.object data should be seperated by , */
+
+
+        let vikas = {
+            name: 'vikas',
+            lastname: 'kumar',
+            course: 'web dev',
+        }
+
+        let qua = {
+            'school': 'sk',
+            'college': 'rec banda',
+
+        }
+
+        // Accessing the object values using keys - 2 methods
+        // console.log(souravDetails['name'])
+        // console.log(souravDetails.course)
+
+
+        //console.log(Object(vikas))
+        //console.log(Object(qua))
+
+
+        console.log(vikas.name) //perticular value we can acces
+        //  console.log(vikas.keys) we cant acces hole keys and values by this syntax
+
+
+
+        console.log(vikas['name'])//if u want to acces values without object keyword
+        console.log(qua.school)
+
+
+        /* let arr = [1, 2, 3]
+         arr[0] = 6
+         console.log(arr)*/
+        qua.class = 'JS'
+        qua.likeicecreame = false
+        console.log(qua)
+        vikas.hobies = ['cricket', 'TT']
+        console.log(vikas)
+
+        //take array input ro user
+        let arr = []
+        for(let i=0;i<3;i++){
+        let b = Number(prompt('Enter Array'))
+        arr.push(b)
+        }
+        console.log(arr)
+    </script>
+</body>
+
+</html>

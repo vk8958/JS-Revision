@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter method</title>
+
+    <style>
+        .background {
+            text-align: center;
+            background-color: blueviolet;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bg">
+        <h1>JavaScript Arrays</h1>
+        <h4>The filter() Method</h4>
+        <p>Click "Test" to get every element in the array that has a value above this number:</p>
+
+        <p><input type="number" id="agetocheck"></p>
+        <button onclick="myfunction()">Test</button>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        const ages = [32, 33, 12, 40];
+
+
+        function myfunction() {
+
+            document.getElementById('bg').classList.add('background')
+            let whereToShow = document.getElementById('demo')
+
+            let input1 = document.getElementById('agetocheck').value;
+            let filterarr = ages.filter(function (element) {
+
+                return element < input1
+            })
+
+            whereToShow.innerText = filterarr
+        }
+
+
+        //its return on the basis of condition -foreach dont return
+
+
+        // The filter() method does not execute the function for empty elements.
+        //The filter() method does not change the original array.
+
+
+
+
+        /* arr = [2, 5, 8, 7, 9]
+          let newarr = arr.filter(function (element, index) {
+              if (element === 5) {
+                  return index
+              }
+          })
+          newarr()*/
+//console.log(newarr)//there is no need to use() to call inside console
+    </script>
+</body>
+
+</html>

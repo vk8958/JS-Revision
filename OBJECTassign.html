@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object assign</title>
+</head>
+
+<body>
+    <script>
+
+        /*The Object.assign() method copies all enumerable own properties from one 
+        or more source 
+        objects to a target object. It returns the modified target object.
+        
+        SYNTAX-   Object.assign(target, ...sources)
+        PARAMETERS-
+        target:
+         The target object — what to apply the sources’ properties to, which is returned after it is modified.
+
+        sources:
+         The source object(s) — objects containing the properties you want to apply.
+        */
+
+
+      /*  const target = {
+            a: 1,
+            b: 2,
+        }
+        const target2 = {
+            c: 9,
+            d: 48,
+        }
+
+        const returnTarget = Object.assign(target, target2)
+        console.log(returnTarget)*/
+
+
+
+        const target = {
+            a: 1,
+            b: 2,
+        }
+       
+        const target2 = {
+            b: 9, //b exist in both objects so ubject to value will be assign 
+            d: 48,
+        }
+      
+        const returnTarget = Object.assign({},target ,target2 )
+        console.log(returnTarget)
+    </script>
+</body>
+
+</html>

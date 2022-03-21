@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        span {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+    <h1>Heading</h1>
+    <p id="pera">Lorem ipsum vikas dolor sit amet consectetur adipisicing elit. Natus asperiores
+        fugiat quaerat odio, eveniet, voluptates quo reiciendis, temporibus iste
+        maiores in amet consequuntur neque ducimus quasi accusantium recusandae
+        eaque. Aliquid magnam et quisquam iste enim dolor, explicabo sapiente d
+        eleniti quos harum, quis nam, animi quidem rerum sit. Illo, facere! Labore
+        laborum vero quia, quis optio alias, nulla deleniti voluptatem expedita,
+        velit aliquid commodi? Aut porro consectetur nemo provident qui saepe nostrum
+        earum dolore tempora iste omnis fugit, a temporibus cum ea neque pariatur
+        nisi magnam dolorem! Eius placeat
+        quasi veniam temporibus, architecto, ipsa doloremque dolorem officiis
+        mollitia nulla numquam deleniti.</p>
+
+
+    <script>
+        const parag = document.getElementById('pera')
+        let peragraph = parag.innerText
+        //console.log(peragraph)
+        let splitString = peragraph.split(' ')
+        let wordcount = 0;
+        for (let i = 0; i < splitString.length; i++) {
+            if (splitString[i].length >= 8) {
+                peragraph = highlight(splitString[i], wordcount, peragraph);
+            }
+            wordcount += splitString[i].length;
+        }
+
+        function highlight(text, start_value, peragraph1) {
+
+            var index = peragraph1.indexOf(text, start_value);
+            if (index >= 0) {
+                peragraph1 = peragraph1.substring(0, index) + "<span class='highlight'>" + peragraph1.substring(index, index + text.length) + "</span>" + peragraph1.substring(index + text.length);
+                parag.innerHTML = peragraph1;
+            }
+            return peragraph1
+        }
+
+        //let checkAll = document.getElementsByClassName("highlight")
+        //console.log(checkAll)
+
+    </script>
+</body>
+
+</html>

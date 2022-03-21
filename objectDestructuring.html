@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object destructuring</title>
+</head>
+
+<body>
+    <script>
+        // we uuse this to assign the properties of the object to variables 
+        /* let person = {
+             firstName: 'vikas',
+             lastName: 'kumar',
+         }*/
+
+        // when you want to assign properties of the person object to variables,
+        // you typically do it like this:
+
+
+        /* let f = person.firstName;
+         let l = person.lastName
+         console.log('my name is '+f+' '+l)*/
+
+
+        // let { firstName ,lastName} = person;//here we can use directt by properties name
+        //  console.log(firstName) //by this we will get the first name this is the way to destructure the object element
+
+
+        //   let { firstName: fname, lastName: lname } = person; //properties will change from first bame to fname as another
+
+
+        // console.log(fname)//output vikas
+
+
+
+
+
+        //**************Setting default values************
+
+
+        //  You can assign a default value to the variable when the property of an object doesn’t exist.
+        // For example:
+
+
+        let person = {
+            firstName: 'vikas',
+            lastName: 'kumar',
+            currentAge: 29,
+        }
+
+        let { firstName, lastName, midleName = ' dhingan', currentAge: age = 18 } = person
+
+
+
+
+     // However, when the person object does have the middleName property, the assignment works as usual:
+    </script>
+</body>
+
+</html>

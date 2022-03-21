@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            content: 'vikas kumar in span';
+            color: green;
+
+        }
+    </style>
+</head>
+
+<body>
+    <p id="pera">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio totam velit minus suscipit, corporis
+        provident
+        tempore earum? Sit veniam eos ab voluptas alias assumenda ad deleniti quis, modi minima animi veritatis quo
+        numquam quisquam reiciendis deserunt ex voluptatum velit molestias sapiente! Voluptates asperiores, officia
+        assumenda non ducimus quos pariatur laborum.</p>
+    <button id="btn">CLICK ME</button>
+    <form id="form1" onsubmit="getFormvalue()">
+        First name: <input type="text" name="fname" value="David"><br>
+        Last name: <input type="text" name="lname" value="Beckham"><br>
+        <input type="submit" value="Submit">
+        <div id="demo">
+            <div class="demp1">vikas</div>
+            <div class="demp1">kumar</div>
+        </div>
+    </form>
+
+    <script>
+        /* function getFormvalue() {
+             var x = document.getElementById("form1");
+             for (var i = 0; i < x.length; i++) {
+                 if (x.elements[i].value != 'Submit') {
+                     console.log(x.elements[i].value);
+                 }
+             }
+         }*/
+         
+        let peragraph = document.getElementById('pera')
+        let button = document.getElementById('btn')
+        let element = document.getElementById('demo')
+        let vikas = document.createElement('span')
+        element.appendChild(vikas)
+        console.log(vikas)
+
+
+        //this is for giving background color red and text color white
+        button.addEventListener('click', () => {
+            peragraph.style.backgroundColor = 'red'
+            peragraph.style.color = 'white'
+        })
+
+    </script>
+</body>
+
+</html>

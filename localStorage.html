@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //THIS IS HOW WE CAN SET ITEM IN LOCAL STORAGE 
+        localStorage.setItem('Name', 'Harry');
+        localStorage.setItem('Name2', 'Rohan');
+
+        //THIS IS HOW WE CAN GET THE ELEMENT FROM THE LOCAL STORAGE 
+        /*  let name = localStorage.getItem('Name')
+          let name2 = localStorage.getItem('Name2')
+          console.log(name)
+          console.log(name2)*/
+
+
+        //THIS IS HOW WE CAN REMOVE THE ELEMENT FROM LOCAL STORAGE
+        /*  localStorage.removeItem('Name')
+          let name = localStorage.getItem('Name')
+          console.log(name)*/
+
+        //NOTE-we cant add array in storage
+        //if we will store the array then it will store in the form of string
+        //so we can use json to stringify that ,lets see how it work 
+
+
+
+        //by this store arr as string
+        /* let arr = ['adrak', 'pyaz', 'bhindi']
+         localStorage.setItem('sabji', arr)
+         let getsabji = localStorage.getItem('sabji')
+         console.log(getsabji)*/
+
+
+        //now using JSON
+        let arr = ['adrak', 'pyaz', 'bhindi']
+        // let str= JSON.stringify(arr) //return string take object
+        //console.log(arr)
+        localStorage.setItem('sabji', JSON.stringify(arr));
+        /* let getsabji = localStorage.getItem('sabji')
+         console.log(getsabji)*/
+        // this will show string which will look like array
+
+
+
+        // but if we want in the form of array so we can use JSON.parse
+        let getsabji = JSON.parse(localStorage.getItem('sabji'))//it return object take array
+        console.log(getsabji) //this will get us array
+
+// when ever we will open that page that storage data will be there
+
+
+
+
+    </script>
+</body>
+
+</html>

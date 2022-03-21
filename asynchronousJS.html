@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASYNCHRONOUS JS</title>
+</head>
+
+<body>
+
+
+    <h1 id="demo"></h1>
+    <script>
+        // asynchronuos js
+        console.log(1)
+        console.log(2)
+        setTimeout(() => {
+            console.log(3)
+        }, 1000)
+        console.log(4)
+        console.log(5)
+        console.log(6)
+
+
+        /* myFunction is waiting for setTimeout function
+     When you pass a function as an argument, remember not to use parenthesis.
+
+    Right: setTimeout(myFunction, 3000);
+
+     Wrong: setTimeout(myFunction(), 3000);
+
+       Instead of passing the name of a function as an argument to another function, you can always pass a whole function instead:*/
+
+       /* setTimeout(myFunction, 3000);
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "I love You !!";
+        }*/
+
+
+
+
+        //CALL BACK 
+        setTimeout(()=>{
+            myFunction('i love you ')
+        },3000)
+
+        function myFunction(value){
+            document.getElementById("demo").innerHTML = value;
+        }
+        
+    </script>
+</body>
+
+</html>

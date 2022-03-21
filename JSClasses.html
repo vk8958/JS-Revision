@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Classes</title>
+</head>
+
+<body>
+
+
+    <script>
+        /* Classes are a template for creating objects. They encapsulate data with
+           code to work on that data. Classes in JS are built on prototypes but also 
+          have some syntax and semantics that are not shared with ES5 class-like semantics.
+      
+      
+          CLASSes has two components: class expressions and class declarations.
+      */
+        // there is class key word that is used and inside this costructor keyword used class creat objects
+
+
+          class rectangle {
+              constructor(height, width) {
+                  this.height = height;
+                  this.width = width;
+              }
+          }
+
+
+        //Hoisting classes are not hoisted 
+        //classes must be define before they can be constructed 
+        /*
+        
+        
+        const p = new Rectangle(); // ReferenceError
+        
+        class Rectangle {}
+        */
+
+
+        //we cant do like this
+
+
+        // ANOTHER WEY TO CREAT CLASS 
+        /*A class expression is another way to define a class. Class expressions can 
+        be named or unnamed. The name given to a named class expression is local to 
+        the class's body. However, it can be accessed via the name property.*/
+
+
+
+        //
+        //UNNAMED
+        let rectangle = class {  //like function here recatangle will be tha name
+
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+            }
+        }
+
+        console.log(rectangle.name)
+          //output:rectangle
+
+
+
+        //NAMED
+        let rectangle = class rectangle2 {  
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+            }
+        }
+        console.log(rectangle.name)
+       // output:rectangle2
+
+
+
+
+
+    </script>
+</body>
+
+</html>

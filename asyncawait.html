@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+
+<body>
+
+
+    <script>
+        // async await make promises eaiser to write
+
+        //1.async makes a function return a promise
+        //2.await makes a function wait for a promise
+        // await exicute asynchroniously 
+
+        /*   async function vikas() {
+               return new Promise((resolve, reject) => {
+                   setTimeout(() => {
+                       let error = true
+                       if (error) {
+                           resolve()
+                       } else {
+                           reject()
+                       }
+                   }, 4000)
+               })
+               function fun3(){
+               }
+   
+               }
+               console.log()
+           vikas().then(function () {
+               console.log('hi i am resolved')
+           }).catch(() => {
+               console.log('reject')
+           })*/
+
+
+
+
+        function fun1() {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    resolve();
+                }, 5000)
+            })
+        }
+
+
+        /* fun1().then(function () {
+             console.log('resolved')
+         }).catch(() => {
+             console.log('reject')
+         })*/
+
+
+
+        /*  async function asyncCall() {
+              console.log('calling')
+              await fun1();
+              // console.log(result)
+              console.log('function resolved')
+          }
+  
+          asyncCall()*/
+
+
+
+        console.log('start')
+
+        async function harry() {
+            console.log('inside harry function')
+            const response = await fun1();
+            console.log('resolved')
+            return response;
+        }
+
+
+
+        console.log('beffore calling harry')
+        let a = harry()
+        console.log('after calling harry')
+        console.log(a)
+        a.then(() => console.log('hi i am resolved'))
+        console.log('last line')
+    </script>
+</body>
+
+</html>
