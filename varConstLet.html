@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js variables</title>
+</head>
+
+<body>
+
+    <h1>js variable</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+
+
+        /*
+
+VAR-RE-INITIALISE AND RE-DECLERATION BOTH ARE ALLOWED 
+LET-RE-INITIALISE IS ALLOWED BUT NOT RE-DECLERATION 
+CONST- BOTH ARE NOT ALLOWED 
+
+        */
+        //SO ALWAYS USE CONST 
+        let a = 8
+        let b = 7
+        a = 0 //here we assign new value it is posible with let 
+        let total = a + b
+        document.getElementById('demo1').innerHTML = 'the total is ' + total
+
+
+        const c = 8
+        const d = 7
+
+        const total2 = c + d
+        document.getElementById('demo2').innerHTML = 'the total is ' + total2
+
+
+        //Declaring a JavaScript Variable
+
+        let D;
+
+
+
+        /*
+               One Statement, Many Variables
+
+                  You can declare many variables in one statement.
+                  Start the statement with let and separate the variables by comma:
+
+                     let person = "John Doe", carName = "Volvo", price = 200;
+        */
+
+
+
+        /*
+        Re-Declaring JavaScript Variables
+         If you re-declare a JavaScript variable declared with var, it will not lose its value.
+
+        The variable carName will still have the value "Volvo" after the execution of these statements:
+
+        Example:
+         var carName = "Volvo";
+         var carName;
+*/
+
+
+
+    </script>
+</body>
+
+</html>
