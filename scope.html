@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope</title>
+</head>
+
+<body>
+
+
+    <script>
+        // with var we can do anything 
+        var x = 'java'
+        console.log(x)
+        var x = 5
+
+
+        {
+            var x = 6
+
+        }
+        console.log(x)
+
+        // Let
+        // it allow to reinitialization so its independent of scope
+        let y = 43
+        y = 5
+
+        {
+            let y = 6
+        }
+        console.log(y)  // output=5
+        //in let we can acces ony in same scope
+
+        let z = 43
+        z = 5
+
+        {
+            z = 6
+        }
+
+        console.log(z) // now output =6
+
+    </script>
+</body>
+
+</html>
