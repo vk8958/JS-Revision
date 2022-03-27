@@ -16,32 +16,63 @@
         <p id="arr"></p>
     </div>
     <script>
-        const cars = [];
-        cars[0] = 'Saab'
-        cars[1] = 'Volvo'
-        cars[2] = 'BMW'
-        console.log(cars)
-        document.getElementById('demo').innerHTML = cars
-           const pera=document.getElementById('arr')
-
-        // using new keyword 
-        const car = new Array('ciksa', 'rahil', 'radhika')
-        console.log(car)
-        document.getElementById('dem').innerHTML = car
-
+        /* const cars = [];
+         cars[0] = 'Saab'
+         cars[1] = 'Volvo'
+         cars[2] = 'BMW'
+         console.log(cars)
+         document.getElementById('demo').innerHTML = cars
+            const pera=document.getElementById('arr')
+ 
+         // using new keyword 
+         const car = new Array('ciksa', 'rahil', 'radhika')
+         console.log(car)
+         document.getElementById('dem').innerHTML = car
+ 
+         let fruits = ["Banana", "Orange", "Apple", "Mango"];
+         // const fruit=fruits[0]
+        // const fruit = fruits[fruits.length - 1]
+        // console.log(fruit)
+       let length= fruits.length
+         let text = '<ul>'
+         for (let i = 0; i < length; i++) {
+             text +=` <li>${fruits[i]}<li> `;
+                
+             }
+             text += '</ul>';
+         pera.innerHTML=text
+         console.log(text)*/
+        //join and toString methods
         let fruits = ["Banana", "Orange", "Apple", "Mango"];
-        // const fruit=fruits[0]
-       // const fruit = fruits[fruits.length - 1]
-       // console.log(fruit)
-      let length= fruits.length
-        let text = '<ul>'
-        for (let i = 0; i < length; i++) {
-            text +=` <li>${fruits[i]}<li> `;
-               
-            }
-            text += '</ul>';
-        pera.innerHTML=text
-        console.log(text)
+        let str = fruits.toString()
+        document.getElementById('demo').innerHTML = str
+        console.log(str)
+        let join = fruits.join('*')
+        console.log(join)
+        document.getElementById('dem').innerHTML = join
+
+        //POPING AND PUSHING
+        //pop()
+        let fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        // fruits2.pop()  //its remove the last element of array
+        //fruits2.pop() return the element that is pop out 
+        //console.log(fruits2)
+
+        //push
+        fruits2.push('Kivi')  //push return the new array length
+        console.log(fruits2)
+
+        // shift and unshift
+        fruits2.shift()
+        console.log(fruits2)
+
+        fruits2.unshift('pineapple')
+        console.log(fruits2)
+
+        //CHANGING ELEMENTS
+        // this change the element 
+        fruits2[0] = 'vikas'
+        console.log(fruits2)
     </script>
 </body>
 
