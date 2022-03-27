@@ -12,9 +12,36 @@
 
     <div class="container">
         <h1 class="demo" id="demo"></h1>
+        <h2 id="dem"></h2>
+        <p id="arr"></p>
     </div>
     <script>
+        const cars = [];
+        cars[0] = 'Saab'
+        cars[1] = 'Volvo'
+        cars[2] = 'BMW'
+        console.log(cars)
+        document.getElementById('demo').innerHTML = cars
+           const pera=document.getElementById('arr')
 
+        // using new keyword 
+        const car = new Array('ciksa', 'rahil', 'radhika')
+        console.log(car)
+        document.getElementById('dem').innerHTML = car
+
+        let fruits = ["Banana", "Orange", "Apple", "Mango"];
+        // const fruit=fruits[0]
+       // const fruit = fruits[fruits.length - 1]
+       // console.log(fruit)
+      let length= fruits.length
+        let text = '<ul>'
+        for (let i = 0; i < length; i++) {
+            text +=` <li>${fruits[i]}<li> `;
+               
+            }
+            text += '</ul>';
+        pera.innerHTML=text
+        console.log(text)
     </script>
 </body>
 
