@@ -10,18 +10,51 @@
 
 <body>
     <button onclick='fun2("Haresh", "Gurav")'>Button 1 :)</button>
-    <button onclick='fun2("Monalisa", "Sahoo")'>Button 2 :)</button>
+    <button onclick='fun2("Monalisa")'>Button 2 :)</button>
     <script>
 
         //Defined the function fun2
 
-        function fun2(a, b) {  //a,b:Parameters
-            // let a = 'Vikas'
-            // let b = 'Kumar'
-            console.log(a + ' ' + b)
+        /*  function fun2(a, b) {  //a,b:Parameters
+              // let a = 'Vikas'
+              // let b = 'Kumar'
+              return (a + ' ' + b)
+          }
+          console.log(fun2('Vikas', 'Kumar'))
+          //Function call
+          let a=Math.floor(0.22)
+          console.log(a)
+  
+          let ArrowFunction=()=>'vikas'
+          console.log(ArrowFunction())*/
+
+
+       /* let check = (num) => {
+            let div = num % 3 == 0 && num % 5 == 0 ? true : false
+            if (div) {
+                return "divisible"5
+            }
+            else {
+                return 'not divisible'
+            }
         }
-       // fun2('Vikas', 'Kumar')
-        //Function call
+        console.log(check(15))*/5
+
+        let a=prompt("enter  a string")
+       
+            for(let j=0;j<=9;j++){
+                for(let i=0;i<a.length;i++){
+                if(a[i]==j){
+                    console.log('not a array')
+                }else{
+                    console.log(a)
+                }
+            }
+           
+        }
+       
+
+      
 
     </script>
 </body>
