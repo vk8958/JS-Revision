@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sorting methods</title>
+</head>
+
+<body>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Aango"];
+
+        fruits.sort()
+        fruits.reverse()
+        console.log(fruits)
+
+
+        const a = [5, 8, 6, 9, 4, 5, 2, 6, 2, 7]
+        a.sort().reverse()
+        console.log(a)
+        //but if there is more than two digit number  then this method not work 
+
+      /*  const b = [58, 169, 4, 5, 2, 6, 2, 7]
+        b.sort()
+        console.log(b)*/
+// we need to usr compare function inside sort method 
+   
+const b = [58, 169, 4, 5, 2, 6, 2, 7]
+        b.sort((a,b)=>a-b)
+        console.log(b)
+
+
+    </script>
+</body>
+
+</html>
