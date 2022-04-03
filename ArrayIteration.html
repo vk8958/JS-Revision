@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array iteration </title>
+</head>
+
+<body>
+    <script>
+
+        //forEach
+        /*  const arr = [45, 85, 6, 9, 4]
+          arr.forEach(callback);
+          function callback(element,index){
+              if(element==index){
+                  console.log(element)
+              }
+             // console.log(element,index)
+          }
+  
+          arr.forEach((e,i)=>{
+              if(e>i){
+                  console.log(e) 
+              }
+          })*/
+
+
+        //map
+      /*  const arr = [45, 85, 6, 9, 4]
+        let newArr = arr.map(function (value, index) {
+
+            return value * 2
+
+        })
+        console.log(newArr)*/
+
+       //filter
+       //    filter()  method creates a new array with array element that passes a test
+
+       const arr = [45, 85, 6, 9, 4]
+
+       const newArr=arr.filter(function (value,index,array){
+           return value
+       })
+       console.log(newArr)
+    </script>
+</body>
+
+</html>
