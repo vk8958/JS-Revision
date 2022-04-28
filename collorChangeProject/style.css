@@ -1,0 +1,30 @@
+.inner-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+button{
+    background-color: transparent;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+    border: solid black 3px;
+    font-weight: 10px;
+}
+
+.inner-container h1 span{
+color: grey;
+}
+button:hover{
+    cursor: pointer;
+}
+.inner-container h1{
+    background-color: black;
+    color: white;
+    border: solid black 5px;
+    border-radius: 6px;
+}

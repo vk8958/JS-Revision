@@ -28,9 +28,22 @@
 // we need to usr compare function inside sort method 
    
       const b = [58, 169, 4, 5, 2, 6, 2, 7]
-        b.sort((a,b)=>a-b)
+      b.sort((a,b)=>a-b)
+
+
         console.log(b)
 
+        let A=prompt('enter number to be check');
+        let B=Number(A)
+        console.log(B)
+        const check=(a)=>{
+          if(a%3==0&&a%5==0){
+            return "divisible";
+          }else{
+            return  "not divisible";
+          }
+        }
+        console.log(check(B))
 
     </script>
 </body>
