@@ -1,0 +1,13 @@
+.nav-header{
+  display:flex;
+  justify-content: space-between;
+
+    
+}
+.nav-toggle{
+ border: none;
+ background-color: white;
+ width: 70px;
+    height: 30px;
+margin-top: 20px;
+}
