@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+
+<body>
+    <script>
+        /*Scopes-There are three type of scope
+        1.block-scope 
+        2.local scope 
+        3. global scope
+
+        */
+        // variable declared by var not have block scope
+
+
+        {
+            let a = 9;
+        }
+
+        let a = 8;
+        console.log(a);
+
+
+        //Local scope-variable decleared inside function scope cant acces outside
+        //by var also cant 
+
+        //  but when there 
+        function vikas() {
+            let name = "rahul";
+        }
+        console.log(name)
+
+        // Global Scope- variable declared outside function can be access in side outside both
+        
+    </script>
+</body>
+
+</html>
