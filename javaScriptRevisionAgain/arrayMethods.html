@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+
+<body>
+
+    <h1>hi here are string methods</h1>
+    <p>lets start</p>
+
+    <script>
+        const arr = [1, 5, "vikas", 6, "rahul"];
+        arr.push(5);
+        arr.push("sita")
+        arr.pop()
+        arr.shift()
+        arr.unshift("unshift")
+        console.log(arr)
+
+        const arr1 = [5, 5.7, 9, 6, 0]
+        const arr2 = [0, 0, 0, 0];
+        const arr3 = [8, 9, 55, 6];
+        console.log(arr1.concat(arr2))
+        console.log(arr1.concat(arr2, arr3))
+
+        let max=-100000;
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] > max) {
+                max = arr1[i];
+            }
+        }
+        console.log(max)
+
+        for(let i=0;i<arr1.length;i++){
+           console.log( typeof(arr1[i]))
+           console.log( arr1[i]);
+        }
+    </script>
+</body>
+
+</html>

@@ -23,9 +23,10 @@
         let str = 'LFKJFJDFGODFJGIDFJGLDFGJDFGJDFGJDJF'
         let b = str.length;
         let c = str.slice(2, 5) //if we want to count fron start 
-       // c = str.slice(-10, -5)
+       // c = str.slice(-10, -5) if paremeter are negative count from last
         console.log(c)
         console.log(str[0])
+        console.log(str[3])
         console.log(str.charAt(0))
 
 
@@ -38,6 +39,14 @@
 
         btn.addEventListener('click', change)
 
+        let s=" vilas       himynameis vikas kumar what about you";
+       // let slice=s.slice(2,6);
+       let t=s.trim(); //to trim initial space;
+        console.log(t);
+      console.log(s.indexOf('vikas',6))
+
+      let string ="hi guys i am vikas i worked as a web developer in acciojob";
+      console.log(string.search("i"))
     </script>
 </body>
 

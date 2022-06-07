@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+
+    <h1 id="demo">hi array practice</h1>
+    <p id="pera">lets do it what it is</p>
+
+    <script>
+        const head = document.getElementById("demo");
+        head.innerHTML = "hi i am chanded"
+        const arr1 = [1, 5, 3, 6];
+        arr1[0] = "vikas";
+        arr1[1];
+        arr1[2] = "rahul";
+        console.log(arr1);
+
+        //one more way to create array with new keyword
+        const arr2 = new Array(5, 6, 7, 8,);
+
+        console.log(typeof (arr2));
+        console.log(typeof (arr1))
+        console.log(arr2)
+
+        const arr = [100, 43, 22, 21]
+        arr.sort();  //this method works only for single digit numbers
+        arr.sort((a,b)=>a-b)  //need to use parensis for sort 
+        const obj = { type: "serviceBot", valid: true }
+        console.log(arr)
+        console.log(typeof arr)
+        console.log(typeof obj)
+   console.log(arr.length)
+
+        // NOTE-STRINGS ARE INMUTABLE BUT ARRAYS AND OBJECTS ARE MUTABLE
+        var immutableString = "Hello";
+
+        // In the above code, a new object with string value is created.
+
+        immutableString = immutableString + "World";
+
+         // We are now appending "World" to the existing value.
+         console.log(immutableString)
+
+    </script>
+</body>
+
+</html>
