@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+
+<body>
+
+    <p>lets display object in html</p>
+    <p id="demo"></p>
+    <script>
+        // OBJECT-everything in js is object 
+        let obj = {
+            'firstName': "Vikas",
+            lastName: "kumar",
+            batch: 11,
+            hair: "black",
+            course: "web dev",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        console.log(obj.firstName);
+        console.log(obj["hair"])
+        // 
+        console.log(obj.fullName())
+
+        for (let values in obj) {
+
+            console.log(values + ":" + obj[values])
+
+        }
+        obj.class = "b.tech";
+        console.log(obj)
+
+        //Nested Object
+
+        const nobj = {
+            name: "Rahul",
+            age: 30,
+            cars: {
+                car1: "Ford",
+                car2: "BMW",
+                car3: "fiat"
+            }
+        }
+
+        //Three way to access nested object
+
+        console.log(nobj.cars.car1);
+        console.log(nobj.cars['car2']);
+        console.log(nobj['cars']['car3'])
+
+
+        //lets show object in html page
+        document.getElementById("demo").innerHTML = nobj.age //output [object object]
+        document.getElementById("demo").innerHTML = Object.values(nobj)
+        document.getElementById("demo").innerHTML = JSON.stringify(nobj)
+
+
+
+        //  object constructors
+
+        function Person(name, color, batch) {
+            this.name = name;
+            this.color = color;
+            this.batch = batch;
+        }
+
+        let object1 = new Person("vikas", "black", 11);
+        let object2 = new Person("rahul", "white", 12);
+
+
+        console.log(object1);
+        console.log(object2)
+
+
+
+        //destricturing objects
+
+        let person = {
+            firstName: "vikas",
+            lastName: "kumar"
+        }
+
+        let firstName=person.firstName;
+        let lastName=person.lastName;
+
+
+        
+      //  https://www.javascripttutorial.net/es6/javascript-object-destructuring/
+
+
+
+
+    </script>
+</body>
+
+</html>

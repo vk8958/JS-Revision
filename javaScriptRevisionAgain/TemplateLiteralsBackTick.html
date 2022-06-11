@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back tick</title>
+</head>
+
+<body>
+    <p>string literals</p>
+    <p id="demo"></p>
+
+    <Script>
+        // Templet literals allows variables in strings
+
+        function pname(name) {
+            let str = `my name is ${name}`
+            console.log(str)
+        }
+
+        pname("Vikas");
+        pname("Rahul");
+        pname("Radhika");
+
+        //Literals in html 
+        const pera = document.getElementById("demo");
+
+        let header = "Template Literals"
+        let tags = ["template literals", "javaScript", "es6"];
+        let html = `<h2>${header}</h2><ul>`;
+
+            for(const x of tags){
+                html+=`<li>${x}</li>`;
+            }
+
+            html+="</ul>";
+            pera.innerHTML=html;
+
+    </Script>
+</body>
+
+</html>

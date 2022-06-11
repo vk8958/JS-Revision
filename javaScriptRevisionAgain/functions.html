@@ -34,7 +34,7 @@
            for (let i = 0; i < 5; i++) {
                arr[i] =Number(prompt("Enter array elemetns"));
            }
-           console.log(arr);*/
+           console.log(arr);
 
         function fibonacci(n) {
             if (n == 0 || n == 1) {
@@ -70,18 +70,58 @@
         }
         console.log(checkNum(15));
 
-        let str = prompt("Enter the string");
+       // let str = prompt("Enter the string");
         let iteraate = (string) => {
               let arr= string.split(" ");
               for(let i=0;i<arr.length;i++){
-                 arr[i].charAt(0)= arr[i].charAt(0).toUpperCase();
+                  arr[i].charAt(0).toUpperCase();
               }
               console.log(arr)
         }
         iteraate(str);
+*/
+        const ar = [5, 6, 8, 4, 4, 1, 5, 8];
+        ar.forEach(function (value, index, array) {
+            console.log(index + ":" + value);
 
-        const ar=[5,6,8,4,4,1,5,8];
-        
+        })
+
+        //fillter method
+        let newArray = ar.filter(function (e, i, a) {
+            return e % 2 == 0;
+        })
+        console.log(newArray)
+
+        let newArrMap = ar.map(function (element, index, array) {
+            return element * index;
+        })
+        console.log(newArrMap)
+
+
+
+        console.log(Math.floor(Math.random() * 11))
+        const array = [5, 6, 8, 7, 4, 1, 2];
+
+        //every -return boolean if every element pass the conditon or not 
+
+        let ans = array.every(function (element, index, arr) {
+            return element % 2 != 0;
+        })
+        console.log(ans)
+
+        // some -if any of one element pass the condition return true else false
+         let answer=array.some((element,index,array)=>{
+            return element ==index;
+         })
+         console.log(answer)
+
+         //REDUCE- 
+         /* Syntax-  array.reduce(function(total,element,index,arr),initialvalue)
+         */
+            let reduAns=array.reduce(function (total,element,index,arr){
+                     return total;
+            });
+            console.log(reduAns)
     </script>
 </body>
 
