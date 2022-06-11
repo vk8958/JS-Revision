@@ -87,15 +87,45 @@
             lastName: "kumar"
         }
 
-        let firstName=person.firstName;
-        let lastName=person.lastName;
-
-
-        
-      //  https://www.javascripttutorial.net/es6/javascript-object-destructuring/
+        let firstName = person.firstName;
+        let lastName = person.lastName;
 
 
 
+        //  https://www.javascripttutorial.net/es6/javascript-object-destructuring/
+
+
+
+        //Call()-  its method of function    and these also apply() ,  bind();
+
+
+        const callObj = {
+
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+
+        }
+
+       
+        const callObj1={
+
+            firstName:"sita",
+            lastName:"singh",
+
+        }
+
+    const callObj2={
+
+        firstName:"raja",
+        lastName:"kumar"
+
+    }
+
+
+    let name= callObj.fullName.call(callObj1);
+    console.log(callObj.fullName.call(callObj2))
+    console.log(name)
 
     </script>
 </body>
