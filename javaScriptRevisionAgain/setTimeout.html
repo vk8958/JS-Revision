@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //  setTimeout-if you want to call a function after some time
+        function fun(){
+            console.log("hi I am here after this time")
+        }
+
+      const id=  setTimeout(fun,2000);
+      console.log(id)
+
+        const inrervalId=setInterval(fun,1000);
+        console.log(inrervalId)
+
+        //we can use this id to stop this setInterval
+
+          clearInterval(inrervalId)   //we can usr this on onclick event 
+
+          
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // try catch  finaly through
+
+        try {
+           console.log("hi i am inside try")
+        } catch (err) {
+            console.log("try has error")
+            console.log(err.message)
+        } finally {
+            console.log("hi i am finally")
+        }
+
+        console.log("end the code")
+
+
+        //Through- is used to  through error
+                let a=2;  
+          if(a){
+            throw new Error("i am error")
+          }else{
+            console.log("i am else")
+          }
+         
+
+    </script>
+</body>
+
+</html>
