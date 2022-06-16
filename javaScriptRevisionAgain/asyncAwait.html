@@ -13,13 +13,17 @@
     <script>
 
         async function fun() {
-            return null;
+            await new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    resolve("hi i am resolve")
+                }, 3000);
+            })
         }
-fun().then(function (){
-    console.log("hi i am inside .then");
-}).catch(function(){
-    console.log("hi i am inside catch")
-})
+        fun().then(function () {
+            console.log("hi i am inside .then");
+        }).catch(function () {
+            console.log("hi i am inside catch")
+        })
         console.log(fun());
     </script>
 

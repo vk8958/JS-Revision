@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class car {
+            constructor(color, model) {
+                this.color = color;
+                this.model = model;
+                console.log("i am constructor of class")
+            }
+
+            method(name){
+                console.log(name +" hi i am  method inside  and i am using "+this.model)
+            }
+        }
+
+        let car1 = new car("black", "punch");
+        let car2 = new car("white", "bmw");
+
+
+
+
+        console.log(car1.color)
+        console.log(car2.model)
+    
+        //method call
+          car2.method("Vikas")
+
+    </script>
+</body>
+
+</html>

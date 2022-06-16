@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //class Inheritance
+
+        class car {
+            constructor(color, model) {
+                this.color = color;
+                this.model = model;
+                console.log("i am constructor of class")
+            }
+
+            method(name) {
+                console.log(name + " hi i am  method inside  and i am using " + this.model)
+            }
+        }
+
+
+
+        //lets inherits class car
+        class newclass extends car {
+            constructor(color, color1) {
+                console.log("hi i am inside extend constrictor")
+                super(color);
+                this.color = color
+                this.color1 = color1;
+
+
+            }
+        }
+
+        let car3 = new newclass("yellow", "pink")
+        console.log(car3.color, car3.color1);
+        //let car1 = new car("black", "punch");
+        // let car2 = new car("white", "bmw");
+
+
+
+
+        //  console.log(car1.color)
+        // console.log(car2.model)
+
+        //method call
+        //car2.method("Vikas")
+
+
+        class laptop {
+
+            constructor(company, ssd, graphics) {
+
+                console.log("hi i am inside main class constrictor");
+
+                this.company = company;
+                this.ssd = ssd;
+                this.graphics = graphics;
+            }
+
+            power() {
+                console.log(this.company + "is going to power off")
+            }
+
+            static add(a, b) {
+                console.log(a + b);
+            }
+
+        }
+
+
+        class minilapy extends laptop {
+            constructor(company, ssd, color) {
+                console.log("HI IM INSIDE INHERIT CLASS");
+                super(company, ssd);
+                this.color = color;
+            }
+        }
+  
+
+        let objOfLaptop=new minilapy("HP",225,'black');
+           console.log(objOfLaptop.company)
+
+
+    </script>
+
+
+</body>
+
+</html>
